@@ -117,7 +117,6 @@ def main(args):
   test_dataset = MPASDataset(
       root=args.root,
       train=False,
-      data_len=1000,
       transform=transforms.Compose([Normalize(), ToTensor()]))
 
   kwargs = {"num_workers": 4, "pin_memory": True} if args.cuda else {}
